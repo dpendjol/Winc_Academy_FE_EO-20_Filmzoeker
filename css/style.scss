@@ -1,0 +1,174 @@
+// ==================
+// IMPORTS
+// ==================
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+// ==================
+// RESET SETTINGS
+// ==================
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// ==================
+// GLOBAL STYLES
+// ==================
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body {
+    background-color: black;
+    color: whitesmoke;
+    font-family: 'Bad Script', cursive;
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+nav {
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+// ==================
+// HEADER
+// ==================
+
+.header {
+    padding: 1rem 0;
+    width: 100%;
+    &__title {
+        text-align: center;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        
+    }
+}
+
+// ==================
+// MOVIES
+// ==================
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &__item {
+        display: grid;
+        grid-template-columns: minmax(auto, 200px) minmax(auto, 50px);
+        grid-auto-rows: 4rem auto;
+        justify-content: end;
+        align-items: end;
+        margin: 10px 20px;
+        line-height: 1.2;
+    }
+    &__item > p {
+        justify-self: end;
+    }
+    &__imagelink {
+        grid-column: 1 / -1;      
+    }
+    &__item img {
+        transition: 0.5s ease-in;
+        max-width: 100%;
+        margin-top: 1rem;
+        box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.4);
+        &:hover {
+            transition: 0.5s ease-in;
+            transform: scale(1.03);
+            box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.4);
+        }
+    }
+}
+
+// ==================
+// Radiobutton filters
+// ==================
+.filter {
+    list-style-type: none;
+    margin: 0x 0;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    &__item {
+        padding: 0 5px;
+    }
+}
+
+// ==================
+// Text input filter thru search bar
+// ==================
+.search {
+    @extend .filter;
+    justify-content: space-around;
+    &__year {
+        padding-bottom: 5px;
+    }
+}
+
+// ==================
+// FOOTER
+// ==================
+.footer {
+    @extend nav;
+    padding-top: 10px;
+    top: unset;
+    bottom: 0;
+    text-align: center;
+}
+
+// ==================
+// SPECIALS
+// ==================
+.error {
+    color: red;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+.hide {
+    display: none;
+}
+
+// ==================
+// MEDIA QUERY: AJUST FOR SMALL SCREENS
+// ==================
+
+@media only screen and (max-width: 580px) {
+    nav {
+        position: relative;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    body {
+        min-width: 250px;
+    }
+    
+    nav {
+        position: relative;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+
+    .search > span {
+        text-align: center;
+    }
+}

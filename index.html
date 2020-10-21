@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Import scripts -->
+    <script defer src="./src/db.js"></script>
+    <script defer src="./src/script.js"></script>
+
+    <title>Film Zoeker</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Welkom bij de Winc Filmzoeker</h1>
+    </header>
+
+    <nav class="navigation">
+        <div class="search">
+            <span class="search__text">
+                <label for="search">Zoek in titel:</label>
+                <input type="text" id="search" name="search" placeholder="keyword..." />
+            </span>
+        </div>
+
+        <ul class="filter">
+            <li class="filter__item">
+                <label for="no-filter">Geen filter</label>
+                <input type="radio" id="no-filter" name="filter" />
+            </li>
+            <div>
+            <li class="filter__item">
+                <label for="newest">Nieuwste</label>
+                <input type="radio" id="newest" name="filter" />
+            </li>
+            <li class="search__year hide">
+                <label for="inputYear">Geef weer vanaf:</label>
+                <input type="number" min="1998" max="2020" value="2014" step="1" maxlength="4" size="4" name="inputYear" id="inputYear">
+            </li>
+            </div>
+            <li class="filter__item">
+                <label for="avengers">Avengers</label>
+                <input type="radio" id="avengers" name="filter" />
+            </li>
+            <li class="filter__item">
+                <label for="x-men">X-Men</label>
+                <input type="radio" id="x-men" name="filter" />
+            </li>
+            <li class="filter__item">
+                <label for="princess">Princess</label>
+                <input type="radio" id="princess" name="filter" />
+            </li>
+            <li class="filter__item">
+                <label for="batman">Batman</label>
+                <input type="radio" id="batman" name="filter" />
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <ul id="movies" class="movies">
+    
+            
+    
+
+        </ul>
+    </main>
+
+    <footer class="footer">
+        Assignment from Winc Academy
+    </footer>
+</body>
+</html>
