@@ -33,7 +33,7 @@ label {
     margin-right: 5px;
 }
 
-nav {
+.navigation {
     position: sticky;
     top: 0px;
     z-index: 10;
@@ -121,7 +121,7 @@ nav {
 // FOOTER
 // ==================
 .footer {
-    @extend nav;
+    @extend .navigation;
     position: fixed;
     padding-top: 10px;
     top: unset;
@@ -148,26 +148,27 @@ nav {
 // ==================
 
 @media only screen and (max-width: 580px) {
-    nav {
-        position: relative;
-    }
-
     label {
         font-size: 1rem;
     }
+
+    .navigation {
+        position: relative;
+    }
+
 }
 
 @media only screen and (max-width: 380px) {
     body {
         min-width: 250px;
     }
-    
-    nav {
-        position: relative;
-    }
 
     label {
         font-size: 0.8rem;
+    }
+
+    .navigation {
+        position: relative;
     }
 
     .search > span {

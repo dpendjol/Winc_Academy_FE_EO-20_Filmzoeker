@@ -23,7 +23,7 @@ label {
   margin-right: 5px;
 }
 
-nav, .footer {
+.navigation, .footer {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
@@ -144,11 +144,11 @@ nav, .footer {
 }
 
 @media only screen and (max-width: 580px) {
-  nav, .footer {
-    position: relative;
-  }
   label {
     font-size: 1rem;
+  }
+  .navigation, .footer {
+    position: relative;
   }
 }
 
@@ -156,11 +156,11 @@ nav, .footer {
   body {
     min-width: 250px;
   }
-  nav, .footer {
-    position: relative;
-  }
   label {
     font-size: 0.8rem;
+  }
+  .navigation, .footer {
+    position: relative;
   }
   .search > span {
     text-align: center;
