@@ -122,10 +122,12 @@ nav {
 // ==================
 .footer {
     @extend nav;
+    position: fixed;
     padding-top: 10px;
     top: unset;
     bottom: 0;
     text-align: center;
+    width: 100%;
 }
 
 // ==================
